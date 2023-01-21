@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="documentation.css">
+        <title>Documentation</title>
+    </head>
+    <body>
+        <h1>Introduction</h1>
+        <p>
+            Welcome to the Graph Theory Visualizer. This tool was created by John Yu to visualizee how graph theory algorithms work. This document will walk you navigate the various commandds and give a summary of each algorithm that is offered. Lets begin.
+        </p>
+        <h1>How to Use</h1>
+        <p>
+            Start by selecting an algorithm. Click on the algorithms dropdown to show the available algorithms you can select.
+            <br>
+            <img src="pictures/algorithmDropdown.png">
+            <br>
+            Next place a node. Click on the <em>Add Node</em> button, then click anywhere in the canvas. To remove a node select <em>Remove Node</em> and click on node(s) to remove.
+            <br>
+            <img src="pictures/addNode.png">
+            <br>
+            When two nodes are present you can place an edge. Click on a node as the starting point, then click on a different node as the end point. To remove an edge select <em>Remove Edge</em> and click on the edge to remove it.
+            <br>
+            <img src="pictures/addEdge.png">
+            <br>
+            Placing a directed edge is the same as placing an unweighted edge as shown.
+            <br>
+            <img src="pictures/addDirEdge.png">
+            <br>
+            For a weighted edge the canvas will prompt you for a weight or flow capacity. Type in a weight or flow capacity in the red input field shown. While the input field is red do not press any buttons, nodes, edges, nor anything for that matter. Press enter to submit. The input field will turn white upon successful submission.
+            <br>
+            <img src="pictures/addWeightedEdge.png">
+            <img src="pictures/addWeightedEdge2.png">
+            <br>
+            Depending on the graph you many need to select a start and/or an end node. To select a start node select <em>Set Start</em>, then click on any node. The start node is highlighted as cyan. To select an end node select <em>Set End</em>, then click on any node. The end node is highlighted as magnenta. If a node is the start and end node it will be highlighted yellow.
+            <br>
+            <img src="pictures/selectStartEnd.png">
+            <img src="pictures/selectStartEnd2.png">
+            <br>
+            Once you are satisfied with your graph select a speed. This toggles the speed that the visualizer will run through the algorithm. For algorithms with very long run times like the Bellman-Held-Karp algorithm you can disable visualization by selecting <em>Display Off</em>.
+            <br>
+            <img src="pictures/selectSpeed.png">
+            <br>
+            Press <em>Start</em> and watch the algorithm run through your graph. 
+            <br>
+            Nodes are color coded for various situations.
+            <ul>
+                <li>Cyan represents the start node</li>
+                <li>Magenta represents the end node</li>
+                <li>Yellow represents the node being a start and end node</li>
+                <li>Orange indicates the algorithm is currently processing the node and outgoing edges</li>
+                <li>Gray indicates nodes that the algorithm backtracked from</li>
+                <li>Green indicates the nodes and edges part of the final output</li>
+                <li>Red indicates a bridge and articulation point</li>
+            </ul>
+        </p>
+        <h1>Algorithms</h1>
+        <h2>Depth First Search</h2>
+        <p>
+            The Depth First Search algorithm is a graph traversal algorithm. This algorithm works on directed/undirected and weighted/unweighted graphs. Weight is irrelevant for this algorithm so you will not be given the option to create weighted graphs. The algorithm will traverse through the graph and backtracks upon a dead end. The visualizer will highlight nodes currently being searched in orange and backtracked nodes as gray.
+        </p>
+        <h2>Breadth First Search</h2>
+        <p>
+            The Breadth First Search algorithm is a graph traversal algorithm. This algorithm also works on undirected and weighted/unweighted graphs. Weight is irrelevant for this algorithm so you will not be given the option to create weigted graphs. This algorithm will search through each layer of nodes and return the path with the shortest number of connections from the start node to the end node.
+        </p>
+        <h2>Dijkstra</h2>
+        <p>
+            Dijkstra's algorithm is a single shortest path algorithm. This algorithm works on directed/undirected and weighted graphs. This algorithm will return the path of minimal cost from the start node to the end node. This algorithm is limited to positive edge weights
+        </p>
+        <h2>Bellman-Ford</h2>
+        <p>
+            The Bellman-Ford algorithm is an algorithm that find the shortest path in a graph. The algorithm works on directed and weighted graphs. This algorithm will return the path of minimal cost from the start node to the end node. Unlike Dijkstra's algorithm the Bellman-Ford algorithm is compatible on graphs with negative edge weights. This algorithm will not return an output if the graph contains negative cycles.
+        </p>
+        <h2>Floyd-Warshall</h2>
+        <p>
+            The Floyd-Warshall algorithm is an all-pairs shortest-path algorithm. This algorithm works on directed and weighted graphs. This algorithm will return the path of minimal cost for all pairs of nodes. It is not possible to display every possible shortest path so this tool will only display one shortest path of your choice. The Floyd-Warshall algorithm is compatible on graphs with negative edge weights. This algorithm will not return an output if the graph contains negative cycles.
+        </p>
+        <h2>Bridges and Articulation Points</h2>
+        <p>
+            This algorithm finds bridges and articulation points in a graph. This algorithm works on undirected and unweighted graphs. It will highlight any bridges and articulation points in red.
+        </p>
+        <h2>Tarjan</h2>
+        <p>
+            Tarjan's algorithm is an algorithm to find strongly connected components in a graph. This algorithm works on directed and unweighted graphs. Tarjan's will color code each strongly connected component in a random color. 
+        </p>
+        <h2>Bellman-Held-Karp</h2>
+        <p>
+            The Bellman-Held-Karp algorithm is a dynamic programming algorithm to solve the Travelling Salesman Problem. The algorithm works on directed and weighted graphs. This algorithm returns the path of minimal cost that starts at some node, visited each node exactly once, and returns back to the starting node. This algorithm has a time complexity of O(n^2*2^n) such that n is the input size. For graphs with roughly 9 or more nodes it is best to turn off the visualization.
+        </p>
+        <h2>Hierholzer</h2>
+        <p>
+            Hierholzer's algorithm is an algorithm that looks for Eulerian paths in a graph. This algorithm works on directed and unweighted graphs. The algorithm will highlight the edges green in the order they come in the output.
+        </p>
+        <h2>Prim</h2>
+        <p>
+            Prim's algorithm is an algorithm to find the minimum spanning tree of a graph. This algorithm works on undirected and weighted graphs. This algorithm will highlight the edges part of the minimum spanning tree green.
+        </p>
+        <h2>Ford-Fulkerson</h2>
+        <p>
+            The Ford-Fulkerson algorithm is an algorithm to find the maximum flow of a flow graph. This algorithm works on directed and weighted graphs. The Ford-Fulkerson algorithm does a Depth First Search through the graph to look for augmenting paths. It adds the bottleneck value to the edges in the augmenting path.
+        </p>
+        <h2>Edmonds-Karp</h2>
+        <p>
+            The Edmonds-Karp algorithm is an algorithm to find the maximum flow of a flow graph. This algorithm works on directed and weighted graphs. The Edmonds-Karp algorithm does a Breadth First Search through the graph to look for augmenting paths. It addds the bottleneck value to the edges in the augmenting path.
+        </p>
+        <h2>Dinic</h2>
+        <p>
+            Dinic's algorithm is an algorithm to find the maximum flow of a  flowgraph. This algorithm works on directed and weighted graphs. Dinic's first does a Breadth First Search and labels the nodes based on discovery time. It then does a Depth First Search to find augmenting paths such that each successive node has a higher discovery time.
+        </p>
+        <h1>References</h1>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    border-width: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#nav-title {    /*Styles the title of the navigation bar*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    color: #05E9FF;
+}
+
+#buttons {  /*Styles the div containing all the buttons*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+#start-but {    /*Styles the start button*/
+    background: none;
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+    padding: 14px 20px;
+    color: white;
+    transition: background-color 0.15s ease;
+}
+
+#start-but:hover {  /*Styles the start button on hover*/
+    background-color: #2ecc71;
+}
+
+#weight-form {
+    display: none;
+    position: relative;
+    margin: 0px;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    color: black;
+    width: 40px;
+    height: 40px;
+}
+
+#weight-input { /*Used to get the weight of the edge*/
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    font-size: 13px;
+    width: 38px;
+    height: 38px;
+}
+
+#speed-div, #algo-div {
+    position: relative;
+}
+
+#speed-div ul {
+    position: absolute;
+    flex-direction: column;
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 10px 14px;
+    width: 100px;
+    height: 200px;
+    background-color: #4682B4;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    z-index: 99;
+}
+
+#algo-ul {
+    position: absolute;
+    flex-direction: column;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px 14px;
+    width: 250px;
+    height: 500px;
+    background-color: #4682B4;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    z-index: 99;
+}
+
+#docs {
+    margin: 2px 2px;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10pt;
+    text-align: center;
+    color: white;
+    background-color: #4682B4;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#docs:hover {
+    background-color: rgb(4, 166, 247);
+}
+
+.canvas {   /*Styles the canvas*/
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    background-color: black;
+}
+
+.options {  /*Styles all div elements containing class=options*/
+    display: flex;
+    flex-direction: column;
+}
+
+.button-active-background-color { /*Toggles between on and off. Called in nav.js*/
+    background-color: rgb(4, 166, 247);
+}
+
+.button-warning-background-color {
+    background-color: 	#cc3300;
+}
+
+.toggleDisplayNone {
+    display: none;
+}
+
+.toggleDisplayFlex {
+    display: flex;
+}
+
+nav {   /*Styles the nav*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #384474;
+    width: 100vw;
+    height: 10vh;
+}
+
+button {    /*Styles all buttons*/
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10pt;
+    text-align: center;
+    color: white;
+    background-color: #4682B4;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {  /*Styles all buttons on hover*/
+    background-color: rgb(4, 166, 247);
+}
+
+button:disabled {   /*Styles all buttons that are disabled*/
+    cursor: not-allowed;
+    background-color: rgb(26, 93, 148);
+}
+
+body {
+    overflow: hidden;
+}

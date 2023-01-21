@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Graph Theory Visualizer</title>
+    </head>
+    <body>
+        <nav>
+            <h3 id="nav-title">Graph Theory Visualizer</h3>
+            <div id="buttons">
+                <div id="algo-div">
+                    <button id="algo-but">Algorithms &#9660</button>
+                    <ul id="algo-ul">
+                        <li><button>Depth First Search</button></li>
+                        <li><button>Breadth First Search</button></li>
+                        <li><button>Dijkstra</button></li>
+                        <li><button>Bellman-Ford</button></li>
+                        <li><button>Floyd-Warshall</button></li> 
+                        <li><button>Bridges and Articulation Points</button></li>
+                        <li><button>Tarjan</button></li>
+                        <li><button>Bellman-Held-Karp</button></li>
+                        <li><button>Hierholzer</button></li>
+                        <li><button>Prim</button></li>
+                        <li><button>Ford-Fulkerson</button></li>
+                        <li><button>Edmonds-Karp</button></li>
+                        <li><button>Dinic</button></li>
+                    </ul>
+                </div>
+
+                <div id="node-options" class="options">
+                    <button id="add-node-but">Add Node</button>
+                    <button id="rem-node-but">Remove Node</button>    
+                </div>
+
+                <div id="edge-options" class="options">
+                    <button id="add-edge-but">Add Edge</button>
+                    <button id="rem-edge-but">Remove Edge</button>
+                </div>
+                
+                <div id="orientation-options" class="options">
+                    <button id="dir-but">Directed</button>
+                    <button id="undir-but">Undirected</button>
+                </div>
+
+                <div id="weight-option" class="options" >
+                    <button id="weighted-but">Weighted</button>
+                    <button id="unweighted-but">Unweighted</button>
+                </div>
+
+                <div id="start-end-options" class="options">
+                    <button id="set-start-node">Set Start</button>
+                    <button id="set-end-node">Set Finish</button>
+                </div>
+                
+                <div id="clean-up-options" class="options">
+                    <button id="reset-but">Reset</button>
+                    <button id="clear-but">Clear</button>
+                </div>
+
+                <div id="speed-div">
+                    <button id="speed-but">Speed &#9660</button>
+                    <ul id="speed-ul">
+                        <li><button>Slow</button></li>
+                        <li><button>Medium</button></li>
+                        <li><button>Fast</button></li>
+                        <li><button>Display Off</button></li>
+                    </ul>
+                </div>
+
+                <a id="docs" href="documentation.html" target="_blank">Docs</a>
+
+                <button id="start-but">START</button>
+            </div>
+        </nav>
+        <canvas class="canvas"></canvas>
+        <form id="weight-form">
+            <input id="weight-input" type="number" min="-99" max="99" value="99">
+        </form>
+        <script src="canvas.js"></script>
+        <script src="globals.js"></script>
+        <script src="nav.js"></script>
+    </body>
+</html>
